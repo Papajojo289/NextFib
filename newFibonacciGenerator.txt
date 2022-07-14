@@ -1,0 +1,59 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    // private int fibLast = 1;
+    //private int fibPenult = 1;
+    //private int count = 2;
+    //private int fibNext;
+    //private boolean more = true;
+
+    public static void main(String[] args) {
+
+        System.out.println("The first two Fibonacci numbers are 1 and 1");
+        fibFinder();
+    }
+
+
+    public static void fibFinder( /*int fibLast, int fibPenult*/) {
+        int fibLast = 1, fibPenult = 1;
+        int count = 2;
+        int fibNext;
+        boolean more = true;
+        System.out.println("Would you like to know the next Fibonacci number?");
+        System.out.println("Press y for 'yes please', or n for 'no thank you'");
+
+        while (more == true) {
+
+            Scanner scanner = new Scanner(System.in);
+            String answer = scanner.nextLine();
+            System.out.println(answer);
+            if (answer.equals("y")) {
+            
+                count++;
+                fibNext = fibLast + fibPenult;
+                System.out.println("Fibonacci number " + count + " is " + fibNext);
+                fibPenult = fibLast;
+                fibLast = fibNext;
+            } else if (answer.equals("Y")) {
+                count++;
+                fibNext = fibLast + fibPenult;
+                System.out.println("Fibonacci number " + count + " is " + fibNext);
+                fibPenult = fibLast;
+                fibLast = fibNext;
+            } else if (answer.equals("n")) {
+                System.out.println("boring!");
+                more = false;
+            } else if (answer.equals("N")) {
+                System.out.println("boring!");
+                more = false;
+            } else System.out.println("invalid option");
+
+        }
+
+    }
+}
+
+
+
